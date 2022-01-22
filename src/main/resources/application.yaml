@@ -1,0 +1,25 @@
+server:
+  port: 1234
+
+feign:
+  metrics:
+    enabled: true
+  client:
+    refresh-enabled: true
+    config:
+        default:
+          loggerLevel: BASIC
+          connectTimeout: 12000
+          readTimeout: 12000
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+
+logging:
+  level:
+    com.felipe.feign.client.rest.client.HelloClient: DEBUG
+    com.felipe.feign.client.rest.client.RefreshClient: DEBUG
