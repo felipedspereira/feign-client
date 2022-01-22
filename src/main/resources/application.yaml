@@ -18,7 +18,6 @@ management:
       exposure:
         include: "*"
 
-
 logging:
   level:
     com.felipe.feign.client.rest.client.HelloClient: DEBUG

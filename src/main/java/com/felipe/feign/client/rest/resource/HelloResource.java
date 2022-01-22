@@ -8,13 +8,11 @@ import lombok.RequiredArgsConstructor;
 
 @RestController
 @RequiredArgsConstructor
-public class TestComp {
-
+public class HelloResource {
   private final HelloClient hello;
   private final RefreshClient refresh;
   
   @GetMapping(value = "/hello")
-//  @PostConstruct
   public void afterCreate() {
     String string = hello.get();
     System.out.println(string);
@@ -24,5 +22,4 @@ public class TestComp {
   public void refresh() {
     refresh.refresh();
   }
-  
 }
